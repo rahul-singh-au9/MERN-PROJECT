@@ -2,31 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
-
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <!-- Roboto font material Ui -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-
-    <!-- Font Icons material Ui-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-
-    <!--  Material-UI  -->
-    <link rel="stylesheet" href="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js">
-
-    <title>Urban Services - Get Expert Professional Services at Your Home</title>
+    <meta name="description" content="Urban Services" />
+    <link rel="icon" type="image/png" href="./favicon.ico">
+      <link rel="apple-touch-icon" href="./apple-icon.png" />
+      <link rel="manifest" href="./manifest.json" />
+    <title>Memories</title>
   </head>
-
   <body>
     <div id="root"></div>
-  </body>
 
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+
+          navigator.serviceWorker.register("./serviceworker.js")
+
+            .then((reg) => console.log("Success: ", reg.scope))
+            .catch((err) => console.log("Failure: ", err));
+
+        })
+      }
+    </script>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </body>
 </html>
